@@ -1,4 +1,4 @@
-import pandas as pd
+
 df = pd.read_csv('/content/NHS_Data.csv')
 approved_df = df[df["Request Status"] == "Approved"]
 
