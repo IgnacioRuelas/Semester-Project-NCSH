@@ -1,3 +1,9 @@
+#pageTwo including gender, type of insurance and median household income
+import pandas as pd
+import streamlit as st
+import altair as alt
+import matplotlib.pyplot as plt
+
 #Using the shared CSV file
 df = pd.read_csv('/content/NHS_Data.csv')
 
