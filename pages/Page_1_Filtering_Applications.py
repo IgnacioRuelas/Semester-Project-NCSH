@@ -1,5 +1,5 @@
 df = pd.read_csv('https://raw.githubusercontent.com/IgnacioRuelas/Semester-Project-NCSH/refs/heads/main/NHS_Data.csv?token=GHSAT0AAAAAADDNY7R2D4H5546SQU3DI4VW2A2TNCA')
-
+import pandas as pd
 approved_df = df[df["Request Status"] == "Approved"]
 
 def clean_signed_status(val):
