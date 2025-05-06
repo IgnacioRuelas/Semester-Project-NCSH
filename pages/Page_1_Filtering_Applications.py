@@ -1,4 +1,4 @@
-df = pd.read_csv('/content/NHS_Data.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/IgnacioRuelas/Semester-Project-NCSH/refs/heads/main/NHS_Data.csv?token=GHSAT0AAAAAADDNY7R2D4H5546SQU3DI4VW2A2TNCA')
 
 approved_df = df[df["Request Status"] == "Approved"]
 
