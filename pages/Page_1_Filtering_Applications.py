@@ -1,4 +1,5 @@
 import pandas as pd
+import streamlit as st
 df = pd.read_csv('NHS_Data.csv')
 approved_df = df[df["Request Status"] == "Approved"]
 
