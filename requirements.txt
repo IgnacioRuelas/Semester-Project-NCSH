@@ -1,0 +1,10 @@
+altair==5.5.0
+matplotlib==3.10.0
+matplotlib-inline==0.1.7
+matplotlib-venn==1.1.2
+pandas==2.2.2
+pandas-datareader==0.10.0
+pandas-gbq==0.28.0
+pandas-stubs==2.2.2.240909
+plotly==5.24.1
+streamlit==1.45.0
