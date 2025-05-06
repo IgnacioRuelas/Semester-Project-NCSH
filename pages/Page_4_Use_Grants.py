@@ -1,3 +1,9 @@
+#Page four: how many patients did not use their full grant amount in a given application year. What are the average amounts given by assistance type?
+
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+
 #Using the shared CSV file
 df = pd.read_csv('/content/NHS_Data.csv')
 
