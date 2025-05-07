@@ -374,7 +374,7 @@ st.dataframe(approved_df["Days to Support"].describe().to_frame())
 st.title("Grant Usage by Application Year")
 
 #Using the shared CSV file
-df = pd.read_csv('/content/NHS_Data.csv')
+
 
 # 1. Filter to approved
 df_approved = df[df["Request Status"].str.strip().str.lower() == "approved"].copy()
