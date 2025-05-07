@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 
 #Using the shared CSV file
-df = pd.read_csv('/content/NHS_Data.csv')
+df = pd.read_csv('NHS_Data.csv')
 
 # 1. Filter to approved
 df_approved = df[df["Request Status"].str.strip().str.lower() == "approved"].copy()
