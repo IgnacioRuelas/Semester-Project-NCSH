@@ -11,7 +11,7 @@ Original file is located at
 import pandas as pd
 import streamlit as st
 
-df = pd.read_csv('/content/NHS_Data.csv')
+df = pd.read_csv('NHS_Data.csv')
 
 approved_df = df[df["Request Status"] == "Approved"]
 
@@ -52,19 +52,9 @@ st.subheader("Filtered Approved Applications")
 st.dataframe(filtered_df)
 
 #pageTwo including gender, type of insurance and median household income
-import pandas as pd
-import streamlit as st
 import altair as alt
 import matplotlib.pyplot as plt
 
-#Using the shared CSV file
-df = pd.read_csv('/content/NHS_Data.csv')
-
-#DATA CLEAINING
-
-#Fitering and considering only those whose request status is approved
-
-approved_df = df[df["Request Status"] == "Approved"]
 
 # Convert 'Amount' to string and replace special characters
 approved_df["Amount"] = approved_df["Amount"].astype(str).str.replace(r"[$,]", "", regex=True)
@@ -287,14 +277,9 @@ st.pyplot(fig)
 
 #Page three on how long it takes between when the organization receives a patient request and actually send support. It consists of the difference between the date when the payment was mailed and the request date.
 
-import pandas as pd
-import streamlit as st
 import plotly.express as px
 
 #Using the shared CSV file
-df = pd.read_csv('/content/NHS_Data.csv')
-
-approved_df = df[df["Request Status"] == "Approved"]
 
 #CLEANING
 
@@ -386,9 +371,6 @@ st.dataframe(approved_df["Days to Support"].describe().to_frame())
 
 #Page four: how many patients did not use their full grant amount in a given application year. What are the average amounts given by assistance type?
 
-import streamlit as st
-import pandas as pd
-import plotly.express as px
 st.title("Grant Usage by Application Year")
 
 #Using the shared CSV file
@@ -511,15 +493,10 @@ st.plotly_chart(fig, use_container_width=True)
 
 #Page 5: a page that showcases a high-level summary of impact and progress over the past year that can be shown to stakeholders in the foundation.
 
-import streamlit as st
-import pandas as pd
-import plotly.express as px
 
 # ---------- Page Title ----------
 st.title("Nebraska Cancer Specialists Hope Foundation: High-level summary")
 
-# ---------- Load CSV Directly ----------
-df = pd.read_csv('/content/NHS_Data.csv')  # Replace with your actual file name
 
 # ---------- Clean Column Names ----------
 df.columns = df.columns.str.strip()
