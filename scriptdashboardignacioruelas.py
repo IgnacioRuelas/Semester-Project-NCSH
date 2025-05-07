@@ -10,6 +10,7 @@ Original file is located at
 #pageOne
 import pandas as pd
 import streamlit as st
+st.write("Please use the tabs to navigate the dashboard.")
 
 df = pd.read_csv('NHS_Data.csv')
 
