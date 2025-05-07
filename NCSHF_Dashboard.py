@@ -33,7 +33,7 @@ approved_df["Application Signed Cleaned"] = approved_df["Application Signed?"].a
 summary = approved_df["Application Signed Cleaned"].value_counts(dropna=False).reset_index()
 summary.columns = ["Application Signed?", "Count"]
 summary["Percentage"] = (summary["Count"] / summary["Count"].sum() * 100).round(2)
-summary["Percentage"] = summary["Percentage"].astype(str) + "%"
+summary["Percentage"] = summary["Percentage"].apply(lambda x: f"{x:.1f}%")
 
 display_df = approved_df[["Patient ID#", "Application Signed Cleaned"]].rename(
     columns={"Application Signed Cleaned": "Application Signed?"}
