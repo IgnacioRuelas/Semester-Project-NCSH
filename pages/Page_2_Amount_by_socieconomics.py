@@ -5,7 +5,7 @@ import altair as alt
 import matplotlib.pyplot as plt
 
 #Using the shared CSV file
-df = pd.read_csv('/content/NHS_Data.csv')
+df = pd.read_csv('NHS_Data.csv')
 
 #DATA CLEAINING
 
