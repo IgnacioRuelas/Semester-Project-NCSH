@@ -7,7 +7,7 @@ import plotly.express as px
 st.title("Nebraska Cancer Specialists Hope Foundation: High-level summary")
 
 
-df = pd.read_csv('/content/NHS_Data.csv')  
+df = pd.read_csv('NHS_Data.csv')  
 
 # ---------- Clean Column Names ----------
 df.columns = df.columns.str.strip()
