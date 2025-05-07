@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 #Using the shared CSV file
-df = pd.read_csv('/content/NHS_Data.csv')
+df = pd.read_csv('NHS_Data.csv')
 
 approved_df = df[df["Request Status"] == "Approved"]
 
