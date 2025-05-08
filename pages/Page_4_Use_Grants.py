@@ -9,10 +9,10 @@ st.title("Effective Use of Financial Support and Type of Assistance")
 #Using the shared CSV file
 df = pd.read_csv('NHS_Data.csv')
 
-# 1. Filter to approved
+#Filter to approved
 df_approved = df[df["Request Status"].str.strip().str.lower() == "approved"].copy()
 
-# 2. Drop rows with missing critical data
+# Drop rows with missing critical data
 # Changed "Remaining balance" to the actual column name "Remaining Balance"
 usage_df = df_approved.dropna(subset=["App Year", "Remaining Balance"]).copy()
 
@@ -88,7 +88,7 @@ def clean_assistance_type(value):
 
 df_approved["Assistance Type"] = df_approved["Type of Assistance (CLASS)"].apply(clean_assistance_type)
 
-# --- Group by Assistance Type and calculate average ---
+# Group by Assistance Type and calculate average 
 avg_amounts = (
     df_approved.groupby("Assistance Type")["Amount"]
     .mean()
@@ -97,10 +97,10 @@ avg_amounts = (
     .reset_index()
 )
 
-# --- Format dollar amounts for display in chart labels ---
+# Format dollar amounts for display in chart labels 
 avg_amounts["Amount Label"] = avg_amounts["Amount"].map(lambda x: f"${x:,.2f}")
 
-# --- Plot using Plotly for horizontal, sorted bar chart ---
+# Plot using Plotly for horizontal, sorted bar chart 
 fig = px.bar(
     avg_amounts,
     x="Amount",
@@ -121,5 +121,5 @@ fig.update_layout(
 # Show table (optional)
 st.dataframe(avg_amounts[["Assistance Type", "Amount Label"]].rename(columns={"Amount Label": "Average Amount ($)"}))
 
-# --- Show chart in Streamlit ---
+# Show chart in Streamlit 
 st.plotly_chart(fig, use_container_width=True)
