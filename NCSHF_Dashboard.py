@@ -51,7 +51,7 @@ if status_filter != "All":
 else:
   filtered_df = display_df
 st.subheader("Filtered Approved Applications")
-st.dataframe(filtered_df)
+st.dataframe(filtered_df, hide_index=True)
 
 #pageTwo including gender, type of insurance and median household income
 import altair as alt
