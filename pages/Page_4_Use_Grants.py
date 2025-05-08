@@ -4,6 +4,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+st.title("Effective Use of Financial Support and Type of Assistance")
+
 #Using the shared CSV file
 df = pd.read_csv('NHS_Data.csv')
 
