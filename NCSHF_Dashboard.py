@@ -13,6 +13,8 @@ import streamlit as st
 st.markdown("""
 Welcome to The  Nebraska Cancer Specialists (NCS) Hope Foundation daschboard.
 
+MISSION
+
 The NCS HOPE Foundation seeks to improve the lives of individuals and families in the community who are impacted by cancer treatment.
 The foundation provides financial assistance, supportive services, and other resources to oncology and hematology patients, families, and caregivers receiving care in Nebraska.
 
