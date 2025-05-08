@@ -27,7 +27,7 @@ display_df = approved_df[["Patient ID#", "Application Signed Cleaned"]].rename(
 
 st.title("Approved Applications Page")
 st.subheader("Summary of Application Signed Status")
-st.table(summary)
+st.table(summary, hide_index=True)
 
 st.subheader("Filter by Application Signed Status")
 status_filter = st.selectbox("Select a status",["All", "Yes", "No", "Missing"])
