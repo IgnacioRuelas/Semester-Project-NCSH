@@ -23,7 +23,7 @@ summary["Percentage"] = (summary["Count"] / summary["Count"].sum() * 100).round(
 
 display_df = approved_df[["Patient ID#", "Application Signed Cleaned"]].rename(
     columns={"Application Signed Cleaned": "Application Signed?"}
-)
+).reset_index(drop=True)
 
 st.title("Approved Applications Page")
 st.subheader("Summary of Application Signed Status")
