@@ -10,5 +10,8 @@ Original file is located at
 #Initial
 import pandas as pd
 import streamlit as st
-st.write("Please use the tabs to navigate the dashboard.")
+st.write("Welcome to The  Nebraska Cancer Specialists (NCS) Hope Foundation daschboard.
+The NCS HOPE Foundation seeks to improve the lives of individuals and families in the community who are impacted by cancer treatment.
+The foundation provides financial assistance, supportive services, and other resources to oncology and hematology patients, families, and caregivers receiving care in Nebraska.
+Please use the tabs to navigate the dashboard.")
 
