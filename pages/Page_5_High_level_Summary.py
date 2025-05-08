@@ -9,10 +9,10 @@ st.title("Nebraska Cancer Specialists Hope Foundation: High-level summary")
 
 df = pd.read_csv('NHS_Data.csv')  
 
-# ---------- Clean Column Names ----------
+# Clean Column Names
 df.columns = df.columns.str.strip()
 
-# ---------- Clean 'Type of Assistance (CLASS)' ----------
+# Clean 'Type of Assistance (CLASS)'
 df['Type of Assistance (CLASS)'] = (
     df['Type of Assistance (CLASS)']
     .astype(str)
@@ -21,14 +21,22 @@ df['Type of Assistance (CLASS)'] = (
     .replace({'None': 'Missing', 'Nan': 'Missing', '': 'Missing'})
 )
 
-# ---------- Ensure Amount is Numeric ----------
+# Ensure Amount is Numeric
 df['Amount'] = pd.to_numeric(df['Amount'], errors='coerce')
 
-# ---------- Mission Statement ----------
-st.subheader("Mission")
+# Summary 
+st.subheader("Summary")
 st.markdown("""
-The NCS HOPE Foundation seeks to improve the lives of individuals and families in the community who are impacted by cancer treatment.
-The foundation provides financial assistance, supportive services, and other resources to oncology and hematology patients, families, and caregivers receiving care in Nebraska.
+
+We have received more than 2,292 patient requests and have approved over 93% of them. 
+
+We have allocated over $800,000 in support for patients. 
+
+More than 56% of this financial support is dedicated to helping patients with housing needs. 
+
+In fact, over half of our patients receive assistance for housing and groceries.
+More than half of our patients receive support for housing and groceries.
+
 """)
 
 # ---------- Request Status Summary ----------
