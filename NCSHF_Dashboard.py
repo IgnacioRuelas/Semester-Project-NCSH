@@ -10,8 +10,8 @@ Original file is located at
 #Initial
 import pandas as pd
 import streamlit as st
+st.title("Welcome to The  Nebraska Cancer Specialists (NCS) Hope Foundation daschboard")
 st.markdown("""
-Welcome to The  Nebraska Cancer Specialists (NCS) Hope Foundation daschboard.
 
 MISSION
 
