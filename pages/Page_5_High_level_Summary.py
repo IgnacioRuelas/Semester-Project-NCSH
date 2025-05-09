@@ -28,14 +28,14 @@ df['Amount'] = pd.to_numeric(df['Amount'], errors='coerce')
 st.subheader("Summary")
 st.markdown("""
 
-We have received more than 2,292 patient requests and have approved over 93% of them. 
+-We have received more than 2,292 patient requests and have approved over 93% of them. 
 
-We have allocated over $800,000 in support for patients. 
+-We have allocated over $800,000 in support for patients. 
 
-More than 56% of this financial support is dedicated to helping patients with housing needs. 
+-More than 56% of this financial support is dedicated to helping patients with housing needs. 
 
-In fact, over half of our patients receive assistance for housing and groceries.
-More than half of our patients receive support for housing and groceries.
+-Over half of our patients receive assistance for housing and groceries.
+
 
 """)
 
