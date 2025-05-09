@@ -18,6 +18,8 @@ MISSION
 The NCS HOPE Foundation seeks to improve the lives of individuals and families in the community who are impacted by cancer treatment.
 The foundation provides financial assistance, supportive services, and other resources to oncology and hematology patients, families, and caregivers receiving care in Nebraska.
 
-Please use the tabs to navigate the dashboard.""")
+Please use the tabs to navigate the dashboard.
+
+Created by Ignacio Ruelas Avila. """)
 
 
