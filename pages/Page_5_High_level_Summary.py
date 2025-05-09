@@ -39,7 +39,7 @@ st.markdown("""
 
 """)
 
-# ---------- Request Status Summary ----------
+# Request Status Summary 
 st.subheader("Request Summary")
 status_counts = df['Request Status'].value_counts()
 status_percent = (status_counts / len(df)).apply(lambda x: f"{x:.2%}")
@@ -49,7 +49,7 @@ summary_df = pd.DataFrame({
 })
 st.dataframe(summary_df)
 
-# ---------- Pie Chart of Request Status ----------
+# Pie Chart of Request Status 
 st.subheader("Request Status Distribution (Pie Chart)")
 status_counts_df = df['Request Status'].value_counts().reset_index()
 status_counts_df.columns = ['Request Status', 'Count']
@@ -66,7 +66,7 @@ fig.update_traces(textinfo='label+percent+value',
                   hovertemplate="%{label}<br>Count: %{value}<br>Percent: %{percent}")
 st.plotly_chart(fig)
 
-# ---------- Approved Requests ----------
+# Approved Requests 
 approved_df = df[df['Request Status'] == 'Approved']
 
 st.subheader("Approved Financial Support Summary")
